@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <plugin translate="label" module="quartic">
+            <label>Plugin</label>
+            <tab>general</tab>
+            <sort_order>1500</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <config translate="label">
+                    <label>Plugin</label>
+                    <frontend_type>link</frontend_type>
+                    <frontend_model>quartic/adminhtml_system_config_form_iframe</frontend_model>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </config>
+            </groups>
+        </plugin>
+        <!-- <quartic translate="label" module="quartic">
+            <label><![CDATA[<div class="quarticon-headline"></div>QUARTICON | Quartic]]></label>
+            <tab>general</tab>
+            <sort_order>1600</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <config translate="label">
+                    <label>Configuration</label>
+                    <frontend_type>fieldset</frontend_type>
+                    <frontend_model>quartic/adminhtml_system_config_form_fieldset</frontend_model>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <show_disabled_products translate="label">
+                            <label>Show disabled products in XML feed?</label>
+                            <frontend_type>select</frontend_type>
+                            <frontend_model>quartic/adminhtml_system_config_form_field_text</frontend_model>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <tooltip>Decide if you wish to include disabled product in product feed which is downloaded on a daily basis. It will not affect your recommendations.</tooltip>
+                        </show_disabled_products>
+                        <min_qty translate="label">
+                            <label>Minimal product quantity for status equals 1</label>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>quartic/adminhtml_system_config_form_field_text</frontend_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-number validate-zero-or-greater</validate>
+                            <tooltip>Set the number of items in stock to mark them as available for sale (this will affect what products are recommended).</tooltip>
+                        </min_qty>
+                        <catalog_id translate="label">
+                            <label>Quartic Catalog Name</label>
+                            <frontend_type>select</frontend_type>
+                            <frontend_model>quartic/adminhtml_system_config_form_field_text</frontend_model>
+                            <source_model>quartic/catalog</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-number</validate>
+                            <tooltip>At the beginning select ‘—Create new—‘ this will generate your first product catalog which will be uploaded to our cloud later.</tooltip>
+                        </catalog_id>
+                    </fields>
+                </config>
+                <composite translate="label">
+                    <label>Composite products</label>
+                    <frontend_type>fieldset</frontend_type>
+                    <frontend_model>quartic/adminhtml_system_config_form_fieldset</frontend_model>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <configurable_price translate="label">
+                            <label>Price type of configurable product</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>quartic/system_config_source_configurableprice</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </configurable_price>
+                        <configurable_childs translate="label">
+                            <label>Configurable children products</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>quartic/system_config_source_configurablechilds</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </configurable_childs>
+                        <configurable_child_image translate="label">
+                            <label>Configurable children product image</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>quartic/system_config_source_configurablechildimage</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </configurable_child_image>
+                        <configurable_child_price translate="label">
+                            <label>Configurable children product price</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>quartic/system_config_source_configurablechildprice</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </configurable_child_price>
+                        <configurable_child_redirect translate="label">
+                            <label>Redirect simple product to configurable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </configurable_child_redirect>
+                        <grouped_child_price translate="label">
+                            <label>Grouped product price</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>quartic/system_config_source_groupedprice</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </grouped_child_price>
+                        <grouped_child_image translate="label">
+                            <label>Grouped children product image</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>quartic/system_config_source_groupedchildimage</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </grouped_child_image>
+                        <grouped_child_redirect translate="label">
+                            <label>Redirect simple product to grouped</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </grouped_child_redirect>
+                    </fields>
+                </composite>
+            </groups>
+        </quartic> -->
+    </sections>
+</config>
