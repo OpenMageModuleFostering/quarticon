@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/QuarticON",
+    "name": "OpenMageModuleFostering\/QuarticON",
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
     "description": "QuarticON plugin",
     "authors": [
-    {
-        "name": "QuarticON",
-        "email": "it@quartic.pl"
-    }
-],
+        {
+            "name": "QuarticON",
+            "email": "it@quartic.pl"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
